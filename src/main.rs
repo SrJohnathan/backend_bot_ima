@@ -5,15 +5,22 @@ use std::env;
 use std::path::PathBuf;
 use rocket::data::{Limits, ToByteUnit};
 
-
+mod cofg;
 mod domain;
-mod  webhooks;
+mod webhooks;
 mod routes;
 mod auth;
 
 #[tokio::main]
 async fn main() {
-    let routes_api = routes![routes::login];
+
+
+
+    let routes_api = routes![
+        routes::login ,
+        webhooks::whats_gupshup::webhook,
+        webhooks::whats_gupshup::message
+    ];
 
 
     let pat = env::current_dir().unwrap();
@@ -29,4 +36,15 @@ async fn main() {
         .mount("/",
                routes_api,
         ).launch().await.expect("Error rum app");
+}
+
+
+#[cfg(test)]
+mod tests {
+
+    #[test]
+    fn test_add() {
+        assert_eq!(add(1, 2), 3);
+    }
+
 }

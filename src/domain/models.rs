@@ -7,7 +7,7 @@ pub enum Channels {
     whatsapp,
     sms,
 }
-
+#[allow(non_snake_case)]
 #[derive(Serialize, Deserialize, Clone)]
 pub struct MessageGupshup {
     pub r#type: String,
@@ -96,7 +96,7 @@ pub struct Sent {
 pub struct Delivered {
     pub ts: i32,
 }
-
+#[allow(non_snake_case)]
 #[derive(Serialize, Debug, Deserialize, Clone)]
 pub struct Enqueued {
     pub whatsappMessageId: String,
@@ -110,7 +110,7 @@ pub struct Failed {
     pub reason: String,
 
 }
-
+#[allow(non_snake_case)]
 #[derive(Serialize, Debug, Deserialize, Clone)]
 pub struct MessageEvent<T> {
     pub id: String,
@@ -138,7 +138,7 @@ pub struct Sender {
     pub dial_code: String,
 
 }
-
+#[allow(non_snake_case)]
 #[derive(Serialize, Debug, Deserialize, Clone)]
 pub struct Context {
     pub id: String,
@@ -152,7 +152,7 @@ pub struct Text {
     pub r#type:Option<String>
 
 }
-
+#[allow(non_snake_case)]
 #[derive(Serialize, Debug, Deserialize, Clone)]
 pub struct Image {
    pub caption: String,
@@ -160,7 +160,7 @@ pub struct Image {
    pub contentType: String,
    pub urlExpiry: isize
 }
-
+#[allow(non_snake_case)]
 #[derive(Serialize, Debug, Deserialize, Clone)]
 pub struct Video {
    pub caption: String,
@@ -168,7 +168,7 @@ pub struct Video {
    pub contentType: String,
    pub urlExpiry: isize
 }
-
+#[allow(non_snake_case)]
 #[derive(Serialize, Debug, Deserialize, Clone)]
 pub struct File {
    pub caption: String,
@@ -177,14 +177,14 @@ pub struct File {
    pub contentType: String,
    pub urlExpiry: isize
 }
-
+#[allow(non_snake_case)]
 #[derive(Serialize, Debug, Deserialize, Clone)]
 pub struct Audio {
    pub url: String,
    pub contentType: String,
    pub urlExpiry: isize
 }
-
+#[allow(non_snake_case)]
 #[derive(Serialize, Debug, Deserialize, Clone)]
 pub struct ListReply {
     pub title:String,
