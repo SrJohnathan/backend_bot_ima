@@ -5,7 +5,7 @@ use crate::domain::{Auth, ResponseApi};
 
 
 
-#[post("/auth/text", format = "application/json", data = "<task>")]
+#[post("/auth/login", format = "application/json", data = "<task>")]
 pub async fn login(task: Json<Auth>) -> Result<Created<Json<ResponseApi>>, BadRequest<String>> {
 
     let js = task.0;

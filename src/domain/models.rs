@@ -1,5 +1,5 @@
 use serde_derive::{Deserialize, Serialize};
-use reqwest::{Client, Response, Error, StatusCode};
+use reqwest::{Client, Error, StatusCode};
 use crate::cofg::{HOST_API_GUPSHUP, MESSAGE_PATH_GUPSHUP};
 
 

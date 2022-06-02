@@ -20,6 +20,8 @@ directories = "4.0.1"
 uuid = { version = "0.8.2", features = ["serde", "v4"] }
 cronjob = "0.3.17"
 chrono = "0.4"
+diesel = { version = "1.4.4", features = ["postgres"] }
+dotenv = "0.15.0"
 
 
 [dependencies.mongodb]
